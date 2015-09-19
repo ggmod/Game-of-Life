@@ -1,0 +1,136 @@
+body {
+	font-family: Arial, sans-serif;
+	font-size: 14px;
+	color: rgb(71, 71, 71);
+	margin: 10px;
+}
+#game-canvas-container {
+	background-color: rgb(50,50,50);
+	height: 400px;
+}
+#game-canvas {
+	box-shadow: 0 0 5px black;
+	background-color: rgb(50,50,50);
+}
+#game-controlpanel {
+	margin: 3px;
+	display: table;
+}
+#game-controlpanel-inputs {
+	display: table-cell;
+	vertical-align: middle;
+	padding-left: 10px;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.controlpanel-button {
+	background-size: 30px;
+	height: 30px;
+	width: 30px;
+	background-color: rgb(161, 161, 161);
+	display: inline-block;
+	cursor: pointer;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	box-shadow: 1px 1px 3px gray;
+	margin-right: 4px;
+}
+.controlpanel-button.disabled {
+	opacity: 0.6;
+	pointer-events: none;
+}
+.controlpanel-button:hover {
+	box-shadow: 1px 1px 3px rgb(50, 50, 50);
+}
+.controlpanel-button:active {
+	background-color: rgb(141, 141, 141);
+}
+
+.controlpanel-numberinput {
+	padding: 2px;
+	color: rgb(98, 98, 98);
+	font-size: 13px;
+	border: 1px solid rgb(195, 195, 195);
+	width: 70px;
+}
+.controlpanel-numberinput:focus {
+	outline: none; /* for Chrome */
+	box-shadow: 0 0 5px rgb(137, 137, 137);
+}
+.controlpanel-numberinput:disabled {
+	color: darkgray;
+}
+.dragnumberinput {
+	cursor: -moz-grab;
+	cursor: -webkit-grab;
+	cursor: grab;
+}
+.dragnumberinput.dragged {
+	cursor: -moz-grabbing;
+	cursor: -webkit-grabbing;
+	cursor: grabbing;
+}
+
+canvas {
+	cursor: -moz-grab;
+	cursor: -webkit-grab;
+	cursor: grab;	
+}
+canvas.dragged {
+	cursor: -moz-grabbing;
+	cursor: -webkit-grabbing;
+	cursor: grabbing;	
+}
+#canvas-controlpanel {
+	position: absolute;
+	top: 0;
+}
+.canvas-button {
+	position: absolute;
+	left: 8px;
+	color: rgb(182, 182, 182);
+	text-align: center;
+	background-size: 30px;
+	height: 30px;
+	width: 30px;
+	background-color: rgba(0, 0, 0, 0.5);
+	display: inline-block;
+	cursor: pointer;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	box-shadow: 0px 0px 5px gray;
+	border-radius: 4px;
+}
+.canvas-button:hover {
+	box-shadow: 0 0 5px rgb(170, 170, 170);
+}
+.canvas-button:active {
+	background-color: rgba(0,0,0,0.8);
+}
+.canvas-button-text {
+	font-size: 16px;
+	margin-top: 6px;
+	display: inline-block;
+}
+
+#file-content-textarea {
+	width: 100%;
+	display: block;
+	margin-bottom: 5px;
+	height: 250px;
+}
+#filecontent-panel {
+	margin: auto;
+	margin-top: 20px;
+	max-width: 750px;
+}

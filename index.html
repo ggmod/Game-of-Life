@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+		<meta charset="utf-8">
+		<title>Game of Life</title>
+		<link rel="stylesheet" type="text/css" href="css/main.css"></link>
+		<script type="text/javascript" src="js/gameoflife.js"></script>
+		<script type="text/javascript" src="js/lif_parser.js"></script>
+		<script type="text/javascript" src="js/observable.js"></script>
+		<script type="text/javascript" src="js/controls_util.js"></script>
+		<script type="text/javascript" src="js/gameoflife_controls.js"></script>
+	</head>
+	<body>
+		<div id="game-canvas-container">
+			<canvas id="game-canvas" height="400"></canvas>
+		</div>
+		<div id="canvas-controlpanel">
+			<span id="zoom-in-button" class="canvas-button" style="top: 18px"><span class="canvas-button-text">+</span></span>
+			<span id="zoom-out-button" class="canvas-button" style="top: 56px"><span class="canvas-button-text">-</span></span>
+			<span id="recenter-button" class="canvas-button" style="top: 94px; background-image: url('img/resize.png')"></span>
+		</div>
+		<div id="game-controlpanel">
+			<span id="step-back-button" class="controlpanel-button" style="background-image: url('img/back.png')"></span>
+			<span id="play-button" class="controlpanel-button" style="background-image: url('img/play.png')"></span>
+			<span id="pause-button" class="controlpanel-button" style="background-image: url('img/pause.png')"></span>
+			<span id="step-forward-button" class="controlpanel-button" style="background-image: url('img/forward.png')"></span>
+			<span id="restart-button" class="controlpanel-button" style="background-image: url('img/restart.png')"></span>
+			<span id="game-controlpanel-inputs">
+				<span style="margin-right: 20px;">generation: 
+					<input id="generation-counter" type="number" class="controlpanel-numberinput"/>
+					( of <span id="processed-generation-counter">0</span>)
+				</span>
+				<span>step interval (ms): <input id="interval-input" type="number" class="controlpanel-numberinput"/></span>
+			<span>
+		</div>
+		<div id="filecontent-panel">
+			<div>
+				Insert .lif (1.05) file content here: <br/>
+				<textarea id="file-content-textarea"></textarea>
+				<button id="load-file-content-button" class="fileinput-button">Load</button>
+			</div>
+			<div style="margin-top: 15px">
+				Or load a local file from your computer: <br/>
+				<input id="load-file-local-button" type="file"/>
+			</div>
+		</div>
+	</body>
+</html>
